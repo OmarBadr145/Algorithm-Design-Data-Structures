@@ -1,6 +1,6 @@
 #include "Player.h"
 #include "Human.h"
-#include <stdio.h>
+#include <iostream>
 #include <string>
 
 using namespace std;
