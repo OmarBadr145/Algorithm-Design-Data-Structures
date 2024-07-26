@@ -5,6 +5,7 @@
 
 using namespace std;
 
+Human :: Human(){}
 Human :: Human(string name){
     this->HumanName = name;
 }
