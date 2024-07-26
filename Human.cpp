@@ -5,9 +5,8 @@
 
 using namespace std;
 
-Human :: Human(){
-    cout <<"Please input your name"<< endl;
-    cin >> HumanName;
+Human :: Human(string name){
+    this->HumanName = name;
 }
 
 char Human :: makeMove(){

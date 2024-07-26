@@ -7,7 +7,7 @@
 using namespace std;
 
 int main(){
-    Human human;
+    Human human("bruh");
     Computer computer;
     Referee ref;
     cout << "Please input your move, R for Rock, P for Paper, and S for Scissors " << endl;
