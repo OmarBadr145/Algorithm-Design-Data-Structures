@@ -12,6 +12,10 @@ int main(){
     Referee ref;
     
     Player * winner = ref.refGame(&human, &computer);
-    cout << winner->getName() << " wins!" << endl;
+    if (winner == nullptr){
+        cout << "It's a Tie." << endl;
+    };
+    
+    cout << winner->getName() << " Wins." << endl;
     
 }
