@@ -10,7 +10,7 @@ char Computer :: makeMove(){
     return ComputerMove;
 }
 
-string getName(){
+string Computer :: getName(){
     string ComputerName = "Computer";
     return ComputerName;
 }

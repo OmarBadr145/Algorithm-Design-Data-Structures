@@ -9,5 +9,9 @@ using namespace std;
 int main(){
     Human human;
     Computer computer;
-    Player * refGame(Player * human, Player * computer);
+    Referee ref;
+    
+    Player * winner = ref.refGame(&human, &computer);
+    cout << winner->getName() << " wins!" << endl;
+    
 }

@@ -5,7 +5,7 @@
 
 using namespace std;
 
-Player * refGame(Player * player1, Player * player2){
+Player * Referee :: refGame(Player * player1, Player * player2){
     char p1Move = player1->makeMove();
     char p2Move = player2->makeMove();
     Player * winner = nullptr;
