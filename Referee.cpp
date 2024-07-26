@@ -8,6 +8,7 @@ using namespace std;
 Player * refGame(Player * player1, Player * player2){
     char p1Move = player1->makeMove();
     char p2Move = player2->makeMove();
+    Player * winner = nullptr;
     
     /// all draws possible
     if (p1Move == 'r' && p2Move == 'r'){
@@ -24,27 +25,28 @@ Player * refGame(Player * player1, Player * player2){
 
     /// all p1 wins
     if (p1Move == 'r' && p2Move == 's'){
-        cout << player1->getName() << "Wins!";
+        winner = player1;
     };
 
     if (p1Move == 'p' && p2Move == 'r'){
-        cout << player1->getName() << "Wins!";
+        winner = player1;
     };
 
     if (p1Move == 's' && p2Move == 'p'){
-        cout << player1->getName() << "Wins!";
+        winner = player1;
     };
 
     /// all p2 wins
     if (p1Move == 'r' && p2Move == 'p'){
-        cout << player2->getName() << "Wins!";
+        winner = player2;
     };
 
     if (p1Move == 's' && p2Move == 'r'){
-        cout << player2->getName() << "Wins!";
+        winner = player2;
     };
     if (p1Move == 'p' && p2Move == 's'){
-        cout << player2->getName() << "Wins!";
+        winner = player2;
     };
+    return winner;
 
 };
