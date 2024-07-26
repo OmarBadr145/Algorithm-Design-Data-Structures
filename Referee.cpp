@@ -11,40 +11,40 @@ Player * Referee :: refGame(Player * player1, Player * player2){
     Player * winner = nullptr;
     
     /// all draws possible
-    if (p1Move == 'r' && p2Move == 'r'){
+    if (p1Move == 'R' && p2Move == 'R'){
         return nullptr;
     };
 
-    if (p1Move == 'p' && p2Move == 'p'){
+    if (p1Move == 'P' && p2Move == 'P'){
         return nullptr;
     };
 
-    if (p1Move == 's' && p2Move == 's'){
+    if (p1Move == 'S' && p2Move == 'S'){
         return nullptr;
     };
 
     /// all p1 wins
-    if (p1Move == 'r' && p2Move == 's'){
+    if (p1Move == 'R' && p2Move == 'S'){
         winner = player1;
     };
 
-    if (p1Move == 'p' && p2Move == 'r'){
+    if (p1Move == 'P' && p2Move == 'R'){
         winner = player1;
     };
 
-    if (p1Move == 's' && p2Move == 'p'){
+    if (p1Move == 'S' && p2Move == 'P'){
         winner = player1;
     };
 
     /// all p2 wins
-    if (p1Move == 'r' && p2Move == 'p'){
+    if (p1Move == 'R' && p2Move == 'P'){
         winner = player2;
     };
 
-    if (p1Move == 's' && p2Move == 'r'){
+    if (p1Move == 'S' && p2Move == 'R'){
         winner = player2;
     };
-    if (p1Move == 'p' && p2Move == 's'){
+    if (p1Move == 'P' && p2Move == 'S'){
         winner = player2;
     };
     return winner;

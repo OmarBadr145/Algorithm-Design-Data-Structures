@@ -10,7 +10,7 @@ int main(){
     Human human;
     Computer computer;
     Referee ref;
-    cout << "Please input your move, r for Rock, p for Paper, and S for Scissors " << endl;
+    cout << "Please input your move, R for Rock, P for Paper, and S for Scissors " << endl;
     
     Player * winner = ref.refGame(&human, &computer);
     if (winner == nullptr){

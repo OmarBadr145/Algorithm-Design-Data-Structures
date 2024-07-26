@@ -6,7 +6,7 @@
 using namespace std;
 
 char Computer :: makeMove(){
-    char ComputerMove = 'r';
+    char ComputerMove = 'R';
     return ComputerMove;
 }
 
