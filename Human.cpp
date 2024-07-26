@@ -11,8 +11,6 @@ Human :: Human(){
 }
 
 char Human :: makeMove(){
-    char HumanMove;
-    cout << "Please input your move, r for Rock, p for Paper, and S for Scissors " << endl;
     cin >> HumanMove;
     return HumanMove;
 };

@@ -12,6 +12,7 @@ public:
     string getName();
 private:
     string HumanName = "Human";
+    char HumanMove;
 
 
 };

@@ -10,12 +10,17 @@ int main(){
     Human human;
     Computer computer;
     Referee ref;
+    cout << "Please input your move, r for Rock, p for Paper, and S for Scissors " << endl;
     
     Player * winner = ref.refGame(&human, &computer);
     if (winner == nullptr){
         cout << "It's a Tie." << endl;
+    }
+
+    else{
+    cout << winner->getName() << " Wins." << endl;
+
     };
     
-    cout << winner->getName() << " Wins." << endl;
-    
+    return 0;
 }
