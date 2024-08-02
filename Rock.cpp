@@ -1,12 +1,16 @@
 #include "Rock.h"
 #include "Move.h"
 
-Rock::Rock(){
-
+Rock::Rock()
+{
 }
 
+std::unordered_set<std::string> Rock:: getBeats(){
+    return {"Paper"};    
+}
 
-std::string Rock::getName(){
+std::string Rock::getName()
+{
     std::string moveName = "Rock";
     return moveName;
 };

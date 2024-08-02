@@ -5,9 +5,7 @@
 
 class Move{
     public:
-    Move(); 
-    std::unordered_set<std::string> beats;
-    virtual std :: string getName() = 0;
-    
+    virtual std::unordered_set<std::string> getBeats() = 0;
+    virtual std :: string getName() = 0;    
 };
 #endif

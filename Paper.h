@@ -5,8 +5,9 @@
 class Paper : public Move{
     public:
     Paper();
+    std::unordered_set<std::string> getBeats();
     std::string getName();
-    std::unordered_set<std::string> beats = {"Rock"};
+    
 
 
 };

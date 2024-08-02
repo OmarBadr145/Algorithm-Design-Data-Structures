@@ -11,12 +11,12 @@
 using namespace std;
 
 int main(){
-    Human human("bruh");
-    Computer computer;
+    Human human1("bruh");
+    Human human2("ihatethis");
     Referee ref;
-    cout << "Please input your move,Rock,Paper, or Scissors " << endl;
+    cout << "Please input your move, Rock, Paper, or Scissors " << endl;
     
-    Player * winner = ref.refGame(&human, &computer);
+    Player * winner = ref.refGame(&human1, &human2);
     if (winner == nullptr){
         cout << "It's a Tie." << endl;
     }

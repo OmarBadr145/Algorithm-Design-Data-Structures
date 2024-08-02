@@ -3,10 +3,9 @@
 #include "Move.h"
 
 class Rock : public Move {
-
     public:
     Rock();
+    std::unordered_set<std::string> getBeats();
     std::string getName();
-    std::unordered_set<std::string> beats = {"Scissors"};
 };
 #endif

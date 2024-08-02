@@ -5,8 +5,8 @@
 class Scissors : public Move{
     public:
     Scissors(); 
+    std::unordered_set<std::string> getBeats();
     std::string getName();
-    std::unordered_set<std::string> beats {"Paper"};
 
 };
 #endif
