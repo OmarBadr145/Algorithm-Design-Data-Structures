@@ -3,6 +3,11 @@
 #include "Move.h"
 #include "Rock.h"
 #include "Paper.h"
+#include "Monkey.h"
+#include "Pirate.h"
+#include "Zombie.h"
+#include "Robot.h"
+#include "Ninja.h"
 #include "Scissors.h"
 
 class MoveFactory : public Move{
