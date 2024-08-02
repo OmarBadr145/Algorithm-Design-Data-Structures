@@ -4,7 +4,13 @@
 #include <iostream>
 #include <string>
 
-Human :: Human(std :: string name){
+Human::Human()
+{
+    this->HumanName = "Human";
+}
+
+Human ::Human(std ::string name)
+{
     this->HumanName = name;
 }
 
