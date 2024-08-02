@@ -4,13 +4,14 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
 
 class Computer : public Player {
 
 public: 
-    char makeMove();
-    string getName();
+    Move * makeMove();
+    std::string getName();
+private:
+    std::string ComputerMove = "Rock";
 
 };
 #endif

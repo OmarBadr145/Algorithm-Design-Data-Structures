@@ -1,16 +1,15 @@
 #include "Player.h"
 #include "Computer.h"
+#include "MoveFactory.h"
 #include <string>
 #include <iostream>
 
-using namespace std;
 
-char Computer :: makeMove(){
-    char ComputerMove = 'R';
-    return ComputerMove;
+Move * Computer::makeMove(){
+    return MoveFactory::CreateMove(ComputerMove);
 }
 
-string Computer :: getName(){
-    string ComputerName = "Computer";
+std :: string Computer :: getName(){
+    std :: string ComputerName = "Computer";
     return ComputerName;
 }

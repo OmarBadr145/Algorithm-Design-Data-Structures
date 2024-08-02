@@ -1,6 +1,8 @@
 #ifndef HUMAN_H
 #define HUMAN_H
 #include "Player.h"
+#include "Move.h"
+#include "MoveFactory.h"
 #include <iostream>
 #include <string>
 
@@ -8,12 +10,12 @@ class Human : public Player{
 
 public: 
     Human();
-    Human (string);
-    char makeMove();
-    string getName();
+    Human (std :: string);
+    Move * makeMove();
+    std :: string getName();
 private:
-    string HumanName = "Human";
-    char HumanMove;
+    std :: string HumanName = "Human";
+    std :: string moveName;
 
 
 };

@@ -1,52 +1,28 @@
 #include "Referee.h"
 #include "Player.h"
+#include "MoveFactory.h"
 #include <iostream>
 #include <string>
 
-using namespace std;
 
 Player * Referee :: refGame(Player * player1, Player * player2){
-    char p1Move = player1->makeMove();
-    char p2Move = player2->makeMove();
+    Move* p1Move = player1->makeMove();   ///Returns an object of the move 
+    Move* p2Move = player2->makeMove();
     Player * winner = nullptr;
     
-    /// all draws possible
-    if (p1Move == 'R' && p2Move == 'R'){
-        return nullptr;
+    ///// Has to look up using find instead
+    ///Logic to ref the game
+    //1st check for tie
+    if (p1Move->getName() == p2Move->getName()){
+        winner = nullptr;
     };
-
-    if (p1Move == 'P' && p2Move == 'P'){
-        return nullptr;
-    };
-
-    if (p1Move == 'S' && p2Move == 'S'){
-        return nullptr;
-    };
-
-    /// all p1 wins
-    if (p1Move == 'R' && p2Move == 'S'){
+    if (p1Move->beats.find(p2Move->getName()) != p1Move->beats.end()){
         winner = player1;
-    };
-
-    if (p1Move == 'P' && p2Move == 'R'){
-        winner = player1;
-    };
-
-    if (p1Move == 'S' && p2Move == 'P'){
-        winner = player1;
-    };
-
-    /// all p2 wins
-    if (p1Move == 'R' && p2Move == 'P'){
+    }
+    else if (p1Move->beats.find(p2Move->getName()) == p1Move->beats.end()){
         winner = player2;
-    };
+    }
 
-    if (p1Move == 'S' && p2Move == 'R'){
-        winner = player2;
-    };
-    if (p1Move == 'P' && p2Move == 'S'){
-        winner = player2;
-    };
     return winner;
 
 };
