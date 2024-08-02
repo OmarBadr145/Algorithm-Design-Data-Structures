@@ -6,7 +6,7 @@ Rock::Rock()
 }
 
 std::unordered_set<std::string> Rock:: getBeats(){
-    return {"Paper"};    
+    return {"Scissors"};    
 }
 
 std::string Rock::getName()
