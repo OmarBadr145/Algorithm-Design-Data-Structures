@@ -1,4 +1,4 @@
-#include <Truckloads.h>
+#include "Truckloads.h"
 
 int Truckloads::numTrucks(int numCrates, int loadSize){
     if (numCrates <= loadSize){
@@ -7,4 +7,5 @@ int Truckloads::numTrucks(int numCrates, int loadSize){
     if (numCrates % 2 != 0){
         return numTrucks(numCrates/2 + 1, loadSize) + numTrucks(numCrates/2, loadSize);
     }
+    return numTrucks(numCrates/2,loadSize)+numTrucks(numCrates/2,loadSize);
 };
