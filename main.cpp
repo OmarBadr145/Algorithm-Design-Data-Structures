@@ -19,7 +19,7 @@ int main(){
 
     else{
     cout << winner->getName() << " Wins." << endl;
-
+//
     };
     
     return 0;
