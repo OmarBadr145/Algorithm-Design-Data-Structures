@@ -6,6 +6,7 @@ int Reverser::reverseDigit(int value){
 if(value < 10 && value >= 0){
     return value;
 }
+if (value < 0 ){return -1;};
 int r = value % 10;
 int i = log10(value);
 return r*pow(10,i)+reverseDigit(value/10);
