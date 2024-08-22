@@ -1,4 +1,4 @@
-#include "Finder1.h"
+#include "Finder.h"
 
 using namespace std;
 /// look at trying to find
