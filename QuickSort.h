@@ -4,12 +4,9 @@
 
 class QuickSort:public Sort{
 public:
-    std::vector<int> sort(std::vector<int>& list,int start, int index);
-    int partition(std::vector<int>& list, int start, int index);
+    std::vector<int> sort(std::vector<int> list);
 private:
     std::vector<int> list;
-    int start;
-    int index;
 };
 
 #endif

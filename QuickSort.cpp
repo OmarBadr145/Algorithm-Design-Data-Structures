@@ -1,36 +1,55 @@
 #include "QuickSort.h"
-
-int QuickSort::partition(std::vector<int>& list, int start, int end) {
-    // Pivot selection based on the requirement
-    int pivotIndex;
-    if (end - start + 1 >= 3) {
-        pivotIndex = start + 2;  // Select the third element as pivot if the list has at least 3 elements
-    } else {
-        pivotIndex = end;  // Otherwise, select the last element as the pivot
-    }
-
-    int pivot = list[pivotIndex];
-    std::swap(list[pivotIndex], list[end]);  // Move pivot to the end for the partitioning logic
-
-    int i = start - 1;
-
-    for (int j = start; j <= end - 1; j++) {
-        if (list[j] <= pivot) {
-            i++;
-            std::swap(list[i], list[j]);
-        }
-    }
-    std::swap(list[i + 1], list[end]);
-    return i + 1;
-}
-
-std::vector<int> QuickSort::sort(std::vector<int>& list, int start, int end) {
-    if (start < end) {
-        int partitionIndex = partition(list, start, end);
-
-        // Recursion calls for the left side (smaller elements) and the right side (larger elements)
-        sort(list, start, partitionIndex - 1);
-        sort(list, partitionIndex + 1, end);
+std::vector<int> QuickSort::sort(std::vector<int> list)
+{
+    int n = list.size();
+    if (n <= 1) /// basecase if list is smol
+    {
     }
     return list;
-}
+
+    int pivot;
+
+    /// pivot based on how big the list is, if list greater than or equal to 3 then pivot is 3rd element
+    if (n >= 3)
+    {
+        pivot = list[2];
+    }
+    else
+    {
+        pivot = list[0];
+    }
+
+    /// creating vectors to store the partitioned parts
+    std::vector<int> less;
+    std::vector<int> greater;
+    std::vector<int> equal;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (list[i] < pivot)
+        {
+            less.push_back(list[i]); /// if value is less than pivot put it in less
+        }
+        else if (list[i] > pivot)
+        {
+            greater.push_back(list[i]);
+        }
+        else
+        {
+            equal.push_back(list[i]);
+        }
+    }
+
+    ///Recursivly sorting less and greater sizes
+    less = sort(less);
+    greater = sort(greater);
+
+
+    ///Combining sorted parts into solution
+    std::vector<int> solution;
+    solution.insert(solution.end(), less.begin(),less.end());
+    solution.insert(solution.end(),equal.begin(),equal.end());
+    solution.insert(solution.end(),greater.begin(),greater.end());
+
+    return solution;
+};
