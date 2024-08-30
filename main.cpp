@@ -1,21 +1,17 @@
 #include "QuickSort.h"
-#include "BubbleSort .h"
+#include "Sort.h"
+#include "BubbleSort.h"
 #include "RecursiveBinarySearch.h"
 #include <iostream>
 #include <vector>
 
 using namespace std;
 int main() {
-    QuickSort Test;
+    BinarySearch Test;
 
-    vector<int> arr = {10, 7, 8, 9, 1, 5};
-    int n = arr.size();
+    vector<int> arr = {1,2,3,4,5,6,7,8,9,10,11};
+    Test.search(arr, 9);
+    cout << Test.search(arr, 9) << endl;
 
-    Test.sort(arr, 0, n - 1);
-
-    cout << "Sorted Array\n";
-    for (int i = 0; i < n; i++) {
-        cout << Test.sort(arr, 0, n - 1)[i] << " ";
-    }
     return 0;
 }

@@ -1,6 +1,6 @@
 #include "RecursiveBinarySearch.h"
 
-int RecursiveSearch(std::vector<int> list, int number, int low, int high){
+int BinarySearch::RecursiveSearch(std::vector<int> list, int number, int low, int high){
 ///recursive method
     if (high >= low){
         int mid = low + (high - low) /2;
@@ -16,7 +16,7 @@ int RecursiveSearch(std::vector<int> list, int number, int low, int high){
     return -1;  ///If the number is unfound then return 
 };
 
-bool search(std::vector<int> list, int number){
+bool BinarySearch::search(std::vector<int> list, int number){
     int result = RecursiveSearch(list, number,0,list.size()); ///running recursive search 0 is low and the list size is the size
     if (result == -1){
         return false;

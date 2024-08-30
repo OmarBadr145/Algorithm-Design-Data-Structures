@@ -4,8 +4,8 @@
 
 class BinarySearch{
 public:
-    bool search(std::vector<int> list, int number);
     int  RecursiveSearch(std::vector<int> list, int number, int low, int high); ///helper function
+    bool search(std::vector<int> list, int number);
 
 private:
 int high;
