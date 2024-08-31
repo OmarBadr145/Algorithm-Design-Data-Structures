@@ -20,5 +20,13 @@ int main(){
 
     RecursiveBinarySearch * binarySearch = new RecursiveBinarySearch();
     Sort * sorter = new QuickSort();
-    
+    list = sorter->sort(list);
+
+    std::cout << (binarySearch->search(list,1) ? "true" : "false");
+    for (int i = 0; i < list.size(); i++){
+        std::cout << " " << list[i];
+    }
+
+    std::cout << std::endl;
+    return 0;
 }
