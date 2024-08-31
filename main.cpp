@@ -8,23 +8,17 @@
 
 int main(){
     std::string input;
-    std::getline(std::cin, input);
-    std::istringstream iss(input);
-    std::vector<int> arr;
+    std::getline(std::cin,input);
+    std::istringstream inputString(input);
+    std::vector<int> list;
 
     int temp;
-    while(iss >> temp){
-        arr.push_back(temp);
+
+    while(inputString >> temp){
+        list.push_back(temp);
     }
+
     RecursiveBinarySearch * binarySearch = new RecursiveBinarySearch();
     Sort * sorter = new QuickSort();
-    arr = sorter->sort(arr);
-
-    std::cout << (binarySearch->search(arr, 1) ? "true" : "false");
-    for (int i = 0; i < arr.size(); i++){
-        std::cout << " " << arr[i];
-    }
-    std::cout << std::endl;
-    return 0;
-
+    
 }
