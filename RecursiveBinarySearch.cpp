@@ -1,6 +1,6 @@
 #include "RecursiveBinarySearch.h"
 
-bool BinarySearch::search(std::vector<int> list, int number){
+bool RecursiveBinarySearch::search(std::vector<int> list, int number){
     if (list.size() == 1 && list[0] == number){  ///basecase 
         return true;
     }
