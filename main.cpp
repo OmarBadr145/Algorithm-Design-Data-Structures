@@ -22,6 +22,10 @@ int main(){
     Sort * sorter = new QuickSort();
     list = sorter->sort(list);
 
+    // for (int i = 0; i < list.size(); i++){    //testing if it reads the list and it
+    //     std::cout << list[i] << std::endl;
+    // }
+
     std::cout << (binarySearch->search(list,1) ? "true" : "false");
     for (int i = 0; i < list.size(); i++){
         std::cout << " " << list[i];

@@ -2,15 +2,13 @@
 std::vector<int> QuickSort::sort(std::vector<int> list)
 {
     int n = list.size();
+    int pivot;
     if (n <= 1) /// basecase if list is smol
     {
-    }
     return list;
-
-    int pivot;
-
+    }
     /// pivot based on how big the list is, if list greater than or equal to 3 then pivot is 3rd element
-    if (n >= 3)
+    else if (n >= 3)
     {
         pivot = list[2];
     }

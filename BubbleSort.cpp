@@ -2,22 +2,19 @@
 
 std::vector<int> BubbleSort::sort(std::vector<int> list)
 {
-    int i, j;
-    for (i = 0; i < list.size(); i++)
+    int n = list.size(); /// getting list size;
+    int unsorted = 1;
+    while (unsorted)
     {
-        bool swapped = false; /// Set swapped to false every time
-        for (j = 0; j < list.size(); j++)
+        unsorted = false;
+        for (int i = 0; i < n; i++)
         {
-            if (list[j] > list[j + 1])
+            if (list[i - 1] > list[i])
             {
-                std::swap(list[j], list[j + 1]);
-                swapped = true;
+                std::swap(list[i - 1], list[i]);
+                unsorted = true;
             }
-        };
-        if (swapped == false)
-        {
-            break;
-        };
-    };
+        }
+    }
     return list;
 };

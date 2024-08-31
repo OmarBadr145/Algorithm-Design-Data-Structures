@@ -9,7 +9,7 @@ bool RecursiveBinarySearch::search(std::vector<int> list, int number){
         return false;
     }
     
-    int middle = (list.size()-1/2);
+    int middle = ((list.size()-1)/2);
 
     if(list[middle] > number){
         std::vector<int> solution(list.begin(),list.begin() + middle);
