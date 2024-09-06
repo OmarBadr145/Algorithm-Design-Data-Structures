@@ -10,7 +10,7 @@ public:
     ~LinkedList(); ///Destructor
     void insertPosition(int pos, int newNum);/// method to inserting a new node containing the number newNum into position pos
     bool deletePosition(int pos); /// method to remove the node at position pos from the list and delete it, if node deleted return true else if pos out of bounds return false
-    int get(int pos); ///return member data a t locatoin pos, if pos out of bounds return std::numeric_limits < int >::max()
+    int get(int pos); ///return member data at location pos, if pos out of bounds return std::numeric_limits < int >::max()
     int search(int target); ///searches list to find target and returns index, if not presenet return -1
     void printList(); ///print all the data seperated by list
 

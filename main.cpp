@@ -5,9 +5,10 @@
 using namespace std;
 
 int main(){
-    int arr[] = {1,2,3,4};
+    int arr[] = {1,2,10,4};
     int len = sizeof(arr) / sizeof(arr[0]);
     LinkedList Test(arr,len);
 
-    Test.printList();
+    Test.insertPosition(4,19);
+    cout << Test.get(3) << endl;
 }
