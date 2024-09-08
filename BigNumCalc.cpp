@@ -7,15 +7,15 @@ BigNumCalc::~BigNumCalc(){
 
 }
 
-std::list<int>BigNumCalc::buildBigNum(std::string numString){
+std::list<int> BigNumCalc::buildBigNum(std::string numString){
     std::list<int> numbers;
-    for(int i = 0; i < numString.length(); i++){  ///looping through  string
+    for(unsigned int i = 0; i < numString.length(); i++){  ///looping through  string
         numbers.push_back(numString[i] - '0');
     }
     return numbers;
 }
 
-std::list<int>BigNumCalc::add(std::list<int> num1, std::list<int> num2){  
+std::list<int> BigNumCalc::add(std::list<int> num1, std::list<int> num2){  
     std::list<int> result;
     int carry = 0;
 
@@ -39,7 +39,7 @@ std::list<int>BigNumCalc::add(std::list<int> num1, std::list<int> num2){
     return result;
 }
 
-std::list<int>BigNumCalc::sub(std::list<int> num1, std::list<int> num2){
+std::list<int> BigNumCalc::sub(std::list<int> num1, std::list<int> num2){
     std::list<int> result;
     int revCarry = 0;
     
@@ -70,7 +70,7 @@ std::list<int>BigNumCalc::sub(std::list<int> num1, std::list<int> num2){
     return result;
 }
 
-std::list<int>BigNumCalc::mul(std::list<int> num1, std::list<int> num2){
+std::list<int> BigNumCalc::mul(std::list<int> num1, std::list<int> num2){
     int number = num2.front();   //getting first number of num2
     num2.pop_front(); ///deleting first element of num2
 
