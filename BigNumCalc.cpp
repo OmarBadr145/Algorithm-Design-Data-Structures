@@ -41,7 +41,7 @@ std::list<int>BigNumCalc::add(std::list<int> num1, std::list<int> num2){
 
 std::list<int>BigNumCalc::sub(std::list<int> num1, std::list<int> num2){
     std::list<int> result;
-    int revCarry;
+    int revCarry = 0;
     
     while(!num1.empty() || !num2.empty()){
         int sub = revCarry;
