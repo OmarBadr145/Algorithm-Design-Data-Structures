@@ -54,11 +54,14 @@ void LinkedList::insertPosition(int pos, int newNum) {
 ///implement print
 void LinkedList::printList() {
     Node* currNode = head;
-    while (currNode != nullptr) {
-        std::cout << currNode->getData() << std::endl;
-        currNode = currNode->getNext();
+    if (head != NULL){
+        std::cout << "[";
+        while (currNode->getNext() != nullptr) {
+            std::cout << currNode->getData() << " ";
+            currNode = currNode->getNext();
+        }
+    std::cout << currNode->getData() << "]" << std::endl;
     }
-    std::cout << std::endl;
 };
 
 bool LinkedList::deletePosition(int pos){
