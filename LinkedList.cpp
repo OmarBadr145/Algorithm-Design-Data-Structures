@@ -114,3 +114,16 @@ int LinkedList::get(int pos){
     return current->getData();
 };
 
+int LinkedList::search(int target){
+    int index = 1;
+    Node* temp = head;
+    while (temp != NULL){
+       if(temp->getData() == target){
+        return index;
+       } 
+       temp = temp->getNext();
+       index++;
+    }
+    return -1;
+}
+
