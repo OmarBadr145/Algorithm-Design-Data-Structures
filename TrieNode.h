@@ -19,13 +19,29 @@ public:
         }
         routerNum = -1;
     };
+
     TrieNode * getChild(int i){
         return childNode[i];
     };
+
+    void setChild(int i, TrieNode * node){
+        childNode[i] = node;
+    };
     
+    bool getWordEnd(){   ///getter for end of word
+        return endOfWord;
+    }
+    
+    void setWordEnd(int value){     ///setter for word end
+        endOfWord = value;
+    }
 
-
-
+    void setRouterNumber(int number){   ///setter for router number
+        routerNum = number;
+    }
+    int getRouterNumber(){   ///getter for router number
+        return routerNum;
+    }
 
 };
 
