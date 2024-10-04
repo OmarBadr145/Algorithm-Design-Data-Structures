@@ -6,14 +6,23 @@
 
 class TrieNode{
 
-    protected:
+protected:
+    bool endOfWord;
+    TrieNode * childNode[26];
+    int routerNum;
 
-bool wordEnd;
-TrieNode * childNode[26];
-int routerNum;
-
-    public:
-TrieNode();
+public:
+    TrieNode(){
+        endOfWord = false; //initialise endOfWord to false
+        for (int i = 0; i < 26; i++){
+            childNode[i] = NULL;
+        }
+        routerNum = -1;
+    };
+    TrieNode * getChild(int i){
+        return childNode[i];
+    };
+    
 
 
 
