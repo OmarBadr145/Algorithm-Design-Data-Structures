@@ -21,4 +21,35 @@ void Autocomplete::insert(std::string word){
 };
 
 
+std::vector<std::string> Autocomplete::getSuggestions(std::string word){
+    TrieNode * currentNode = rootNode;
+    std::vector<std::string> result;
+    for(int i = 0; i < word.length(); i++){
+        if(currentNode -> getChild(word[i]-'a') == NULL){
+            return result;
+        }
+        currentNode = currentNode -> getChild(word[i] - 'a');
+    }
+    std::vector<std::string> suggestions;
+    getCompletions(currentNode, word, suggestions);
+    return suggestions;
+
+};
+
+    void Autocomplete::getCompletions(TrieNode* node, std::string prefix, std::vector<std::string>& result){
+        if (node == NULL){
+            return;
+        }
+        if(node->getWordEnd()){
+            result.push_back(prefix);
+        }
+        for(int i = 0;i < 27; i++){
+            if(node->getChild(i)!= NULL){
+                getCompletions(node->getChild(i), prefix + char ('a'+i), result);
+            }
+        }
+    };
+
+
+
 

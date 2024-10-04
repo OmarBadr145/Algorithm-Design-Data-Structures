@@ -13,6 +13,7 @@ public:
     Autocomplete(TrieNode* _rootNode);
     void insert(std::string word);  ///inserting words
     std::vector<std::string> getSuggestions(std::string word);  ///returning suggestions
+    void getCompletions(TrieNode* node, std::string prefix, std::vector<std::string>& result);
 };
 
 #endif
