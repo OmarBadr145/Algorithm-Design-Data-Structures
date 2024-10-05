@@ -48,6 +48,7 @@ std::vector<std::string> Autocomplete::getSuggestions(std::string word){
                 getCompletions(node->getChild(i), prefix + char ('a'+i), result);
             }
         }
+        return;
     };
 
 
