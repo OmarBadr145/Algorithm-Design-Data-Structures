@@ -8,9 +8,9 @@ int PrefixMatcher::selectRouter(std::string networkAddress){
     TrieNode * currentNode = rootNode;
 
     int size = networkAddress.length();
-    int router = -1;
+    // int router = -1;
 
-    for(int i = 0; i < size && currentNode->getChild(networkAddress[i]-'0');i++){
+    for(size_t i = 0; i < size && currentNode->getChild(networkAddress[i]-'0');i++){
         currentNode = currentNode->getChild(networkAddress[i]-'0');
         if(currentNode == NULL){
             return -1;
