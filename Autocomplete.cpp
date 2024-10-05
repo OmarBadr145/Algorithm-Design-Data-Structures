@@ -10,7 +10,7 @@ Autocomplete::Autocomplete(TrieNode* _rootNode){
 
 void Autocomplete::insert(std::string word){
     TrieNode * currentNode = rootNode;  ///setting current node to the root node in the tree
-    for(auto i = 0; i < word.length(); i++){
+    for(size_t i = 0; i < word.length(); i++){
         if(currentNode ->getChild(word[i] - 'a') == NULL){   /// subtracting 'a' from a letter in the word to get its asci value into intigers
             TrieNode * newNode = new TrieNode();
             currentNode -> setChild(word[i] - 'a', newNode);   ///fUCKN SICK idea haha, code pretty readable
@@ -24,7 +24,7 @@ void Autocomplete::insert(std::string word){
 std::vector<std::string> Autocomplete::getSuggestions(std::string word){
     TrieNode * currentNode = rootNode;
     std::vector<std::string> result;
-    for(auto i = 0; i < word.length(); i++){
+    for(size_t i = 0; i < word.length(); i++){
         if(currentNode -> getChild(word[i]-'a') == NULL){
             return result;
         }
