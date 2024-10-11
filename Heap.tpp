@@ -204,7 +204,7 @@ public:
         }
         tree[index] = tree.back();   //set the found value to be the end value
         tree.pop_back();   ///remove the last element in vector (which is now the found value)
-        heapify(index); /// now we heapify the vector again
+        heapify(tree); /// now we heapify the vector again
     }
 
     // TO BE IMPLEMENTED
