@@ -194,7 +194,7 @@ public:
     void remove(T value)
     {
         int index = -1; /// set index to -1
-        for (int i = 0; i < tree.size(); i++)   ///traverse tree to find value we are deleting
+        for (auto i = 0u; i < tree.size(); i++)   ///traverse tree to find value we are deleting
         {
             if (tree[i] == value)    ///check value
             {
