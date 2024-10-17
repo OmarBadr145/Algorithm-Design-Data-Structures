@@ -3,8 +3,6 @@
 void DocumentManager::addDocument(std::string name, int id, int license_limit){
     docMap.insert(std::make_pair(id,std::make_pair(name,license_limit)));  ///inserting object with id, name and license limit to docmap
     docMapSearch.insert(std::make_pair(id, name)); ///inserting object with an id and name in docmapsearch
-
-
 };
 
 void addPatron(int patronID);

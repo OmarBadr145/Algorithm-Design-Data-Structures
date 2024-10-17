@@ -11,7 +11,7 @@ private:
 ///need member variable to store the document Id(int) + document name(string) + license limit(string)
 std::unordered_map<int, std::pair<std::string , int>> docMap;
 ///member variable to store patron ids and borrowed books names
-std::unordered_map<int, std::string> patronMap;
+std::unordered_map<int, std::vector<std::string>> patronMap;
 ///member variable to search books easily
 std::unordered_map<int, std::string> docMapSearch;
 
