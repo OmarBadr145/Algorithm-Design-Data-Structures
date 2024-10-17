@@ -16,9 +16,11 @@ std::unordered_map<int, std::string> patronMap;
 std::unordered_map<int, std::string> docMapSearch;
 
 
-
 public:
-void addPatron(int patronID);
+
+void addDocument(std::string name, int id, int license_limit); ///adding new document to the hash map
+
+void addPatron(int patronID); 
 
 int search(std::string name); // returns docid if name is in the document collection or 0 if the name is not in the collection
 
