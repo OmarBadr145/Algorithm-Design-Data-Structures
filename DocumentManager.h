@@ -13,7 +13,7 @@ std::unordered_map<int, std::pair<std::string , int>> docMap;
 ///member variable to store patron ids and borrowed books names
 std::unordered_map<int, std::vector<std::string>> patronMap;
 ///member variable to search books easily
-std::unordered_map<int, std::string> docMapSearch;
+std::unordered_map<std::string,int> docMapSearch;
 
 
 public:
